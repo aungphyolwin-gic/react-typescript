@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { InputField } from './InputField';
 import { ToDo } from './model';
+import { Todos } from './Todos';
 
 
 function App() {
@@ -23,10 +24,7 @@ function App() {
     <div className="App">
       <span className="heading">Taskify</span>
       <InputField todo = {todo} setTodo = {setTodo} handleAdd = {handleAdd}/>
-
-      {todos.map(data => (
-        <li>{data.todo}</li>
-      ))}
+      <Todos todos={todos} setTodos={setTodos} />
     </div>
   );
 }
